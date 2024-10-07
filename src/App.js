@@ -58,7 +58,7 @@ const BinChecker = () => {
             type="text"
             value={bin}
             onChange={(e) => setBin(e.target.value)}
-            className="w-full border border-transparent p-3 rounded-lg bg-white/30 text-white placeholder-white focus:outline-none focus:border-white transition-all shadow-lg focus:shadow-white"
+            className="w-full border border-transparent p-3 rounded-lg bg-white/30 text-white placeholder-white focus:outline-none focus:border-white transition-all shadow-lg"
             placeholder="e.g. 526873"
           />
         </div>
@@ -67,14 +67,14 @@ const BinChecker = () => {
           className="w-full px-4 py-3 mt-2 text-lg font-semibold bg-white text-indigo-700 rounded-lg shadow-lg hover:bg-indigo-600 hover:text-white transition-all transform hover:scale-105"
           disabled={loading}
         >
-          {loading ? 'Checking...' : 'Generate & Check'}
+          {loading ? 'Checking...' : 'Check'}
         </button>
         
         {error && <p className="mt-4 text-red-400 text-center">{error}</p>}
       </div>
 
       {cardDetails && (
-        <div className="mt-8 p-6 w-full max-w-lg bg-white/30 rounded-lg shadow-lg backdrop-blur-md transition-all">
+        <div className="mt-8 p-6 w-full max-w-lg bg-black rounded-lg shadow-lg backdrop-blur-md transition-all">
           <h2 className="text-2xl font-bold text-white text-center mb-4">Card Details</h2>
           <div className="space-y-2">
             {/* <p className="text-lg text-white"><strong>Token:</strong> {cardDetails.token}</p> */}
