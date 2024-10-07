@@ -11,13 +11,13 @@ const BinChecker = () => {
     setLoading(true);
     setError('');
     
-    if (bin.length !== 6) {
-      setError('Please enter a valid 6-digit BIN');
-      setLoading(false);
-      return;
-    }
+    // if (bin.length !== 6) {
+    //   setError('Please enter a valid 6-digit BIN');
+    //   setLoading(false);
+    //   return;
+    // }
 
-    const cardNumber = generateCardNumber(bin);
+    const cardNumber = generateCardNumber(bin.slice(0,6));
     console.log(cardNumber)
     const expiry = generateRandomExpiry();
     const cvv = generateRandomCVV();
@@ -53,7 +53,7 @@ const BinChecker = () => {
       <div className="glassmorphism p-6 max-w-lg w-full rounded-lg shadow-xl transition-all">
         <h1 className="text-3xl font-bold text-white text-center mb-6">BIN Checker</h1>
         <div className="mb-4">
-          <label className="block text-lg text-gray-200 mb-2">Enter BIN (First 6 Digits):</label>
+          <label className="block text-lg text-gray-200 mb-2">Enter BIN / Card Number:</label>
           <input
             type="text"
             value={bin}
